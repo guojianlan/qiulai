@@ -1,3 +1,74 @@
 @import "common/mixin";
-body{background: #eee;}
-div{width: 100px;height: 100px;margin: 0 auto;@include u_radius(8px);background: #fff;}
+html{font-size: $mainSize;height: 100%;overflow: hidden;background: #eee;}
+body{
+  background: #eee;width: 100%;height: 100%;overflow: hidden;color:#272636;
+  //这个是右边的层
+  .r_blackbg{position: absolute;left: 0;top: 0;background: rgba(0,0,0,.5);width: 100%;height: 100%;display: none;z-index: 9999;}
+  //body加上onTouch移动
+  &.onTouch{
+    .ql_container_main{
+      @include translateset(translateX(80%));
+    }
+    .r_blackbg{display: block;}
+  }
+
+}
+.ql_container{
+  height: 100%;width:100%;overflow: hidden;max-width: 960px;margin: 0 auto;
+  .ql_container_main{
+    height: 100%;width: 100%;position: relative;@include transition(all 1s);
+    //left-start
+    .ql_container_l{
+      width: 80%;position: absolute;background: #f4f4f4;left: -80%;height: 100%;overflow: hidden;
+      .ql_container_l_main{
+        height: 100%;width: 100%;overflow-y: auto;overflow-x:hidden;
+        //l_top-start
+        .l_top{
+          width: 100%;height: u(440px);padding-top: u(84px);text-align: center;
+          .l_heardImg{
+            width: u(274px);height: u(274px);@include u_radius(u(274px));background-color: #296946;display: inline-block;position: relative;background-image: url('/static/images/web/boy.png');background-size: contain;background-position: center bottom;background-repeat: no-repeat;
+            .l_myNum{
+              position: absolute;width: u(70px);height: u(70px);right: u(20px);bottom: 0;line-height: u(90px);overflow: hidden;color: #296946;
+              i{font-size: 35px;}
+            }
+            .l_myNumShow{
+              position: absolute;width: u(70px);height: u(70px);right: u(20px);bottom: 0;line-height: u(90px);overflow: hidden;color: #fefb00;font-size: 12px;
+            }
+          }
+        }
+        //l_top-end
+        .l_btnList{
+          &>ul{
+            margin-top: u(20px);background: #fff;padding-left: u(84px);
+            &>li{
+              height: u(84px); border-top: 1px solid #eee;line-height: u(84px);padding-right: u(30px);
+              .btnlist_header{position: absolute;left: u(-84px);top:0;height: u(84px);width: u(84px);line-height: u(84px);text-align: center;}
+              &:first-child{border-top: 1px solid transparent;}
+            }
+            &:first-child{margin-top: 0;}
+          }
+        }
+      }
+    }
+    //left-end
+    //right-start
+    .ql_container_r{
+      width: 100%;background: #000;height: 100%;overflow: hidden;
+      .ql_container_r_main{
+        height: 100%;width: 100%;overflow-y: auto;overflow-x:hidden;
+      }
+    }
+    //right-end
+  }
+
+}
+@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+  html{font-size:($mainSize*1.17);}
+}
+//iphone6 plus
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+  html{font-size:($mainSize*1.29);}
+}
+@media (min-device-width : 737px){
+  html{font-size:($mainSize*1.4);}
+}

@@ -1,5 +1,6 @@
 @import "mixin";
-body{font-size:18px; font-weight: 100; font-family: "Arial","Hiragino Sans GB","微软雅黑","宋体"; text-align:center; color:#666; text-align:left; margin:0px auto; padding:0px; background:#fff;}
+*{@include boxsizing(border-box);}
+body{font-size:$mainSize; font-weight: 100; font-family: "Arial","微软雅黑","宋体"; text-align:center; color:#666; text-align:left; margin:0; padding:0; background:#fff;}
 a{text-decoration:none;}
 li,ul，dl，ol,details,dt,dl{list-style:none;word-wrap: break-word;}
 div{word-wrap: break-word;}
@@ -33,3 +34,16 @@ label{margin: 0;font-weight: normal;}
   .fn#{$i}sz {  @include fnmixin($i*1px)}
   .fn#{$i} {  @include fnmixin(u($i*1px))}
 }
+.clearfix:before,.clearfix:after{
+  content:"";
+  display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+  *zoom:1;/*IE/7/6*/
+}
+.por{position: relative;}
+.poa{position: absolute;}
+.pof{position: fixed;}
+.fl{float: left;}
+.fr{float: right;}

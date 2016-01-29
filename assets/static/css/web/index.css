@@ -1,13 +1,135 @@
-body {
+html {
+  font-size: 20px;
+  height: 100%;
+  overflow: hidden;
   background: #eee; }
 
-div {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  background: #fff; }
+body {
+  background: #eee;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #272636; }
+  body .r_blackbg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 9999; }
+  body.onTouch .ql_container_main {
+    -webkit-transform: translateX(80%);
+    -moz-transform: translateX(80%);
+    transform: translateX(80%); }
+  body.onTouch .r_blackbg {
+    display: block; }
+
+.ql_container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto; }
+  .ql_container .ql_container_main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+    .ql_container .ql_container_main .ql_container_l {
+      width: 80%;
+      position: absolute;
+      background: #f4f4f4;
+      left: -80%;
+      height: 100%;
+      overflow: hidden; }
+      .ql_container .ql_container_main .ql_container_l .ql_container_l_main {
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden; }
+        .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_top {
+          width: 100%;
+          height: 11rem;
+          padding-top: 2.1rem;
+          text-align: center; }
+          .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_top .l_heardImg {
+            width: 6.85rem;
+            height: 6.85rem;
+            -moz-border-radius: 6.85rem;
+            -webkit-border-radius: 6.85rem;
+            border-radius: 6.85rem;
+            background-color: #296946;
+            display: inline-block;
+            position: relative;
+            background-image: url("/static/images/web/boy.png");
+            background-size: contain;
+            background-position: center bottom;
+            background-repeat: no-repeat; }
+            .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_top .l_heardImg .l_myNum {
+              position: absolute;
+              width: 1.75rem;
+              height: 1.75rem;
+              right: 0.5rem;
+              bottom: 0;
+              line-height: 2.25rem;
+              overflow: hidden;
+              color: #296946; }
+              .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_top .l_heardImg .l_myNum i {
+                font-size: 35px; }
+            .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_top .l_heardImg .l_myNumShow {
+              position: absolute;
+              width: 1.75rem;
+              height: 1.75rem;
+              right: 0.5rem;
+              bottom: 0;
+              line-height: 2.25rem;
+              overflow: hidden;
+              color: #fefb00;
+              font-size: 12px; }
+        .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_btnList > ul {
+          margin-top: 0.5rem;
+          background: #fff;
+          padding-left: 2.1rem; }
+          .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_btnList > ul > li {
+            height: 2.1rem;
+            border-top: 1px solid #eee;
+            line-height: 2.1rem;
+            padding-right: 0.75rem; }
+            .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_btnList > ul > li .btnlist_header {
+              position: absolute;
+              left: -2.1rem;
+              top: 0;
+              height: 2.1rem;
+              width: 2.1rem;
+              line-height: 2.1rem;
+              text-align: center; }
+            .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_btnList > ul > li:first-child {
+              border-top: 1px solid transparent; }
+          .ql_container .ql_container_main .ql_container_l .ql_container_l_main .l_btnList > ul:first-child {
+            margin-top: 0; }
+    .ql_container .ql_container_main .ql_container_r {
+      width: 100%;
+      background: #000;
+      height: 100%;
+      overflow: hidden; }
+      .ql_container .ql_container_main .ql_container_r .ql_container_r_main {
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden; }
+
+@media (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    font-size: 23.4px; } }
+@media (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  html {
+    font-size: 25.8px; } }
+@media (min-device-width: 737px) {
+  html {
+    font-size: 28px; } }
 
 /*# sourceMappingURL=index.css.map */

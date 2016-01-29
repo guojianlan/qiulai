@@ -9,6 +9,7 @@ var one = require('html!./index.html');
 
 var indexModule = module.exports = function() {
    console.log('init');
+    console.log($);
     this.init();
 };
 var p = indexModule.prototype;
