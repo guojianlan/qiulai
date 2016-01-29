@@ -1,0 +1,13 @@
+body {
+  background: #eee; }
+
+div {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: #fff; }
+
+/*# sourceMappingURL=index.css.map */
