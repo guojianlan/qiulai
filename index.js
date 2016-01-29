@@ -2,7 +2,7 @@ var Hapi = require('hapi');
 var Path = require('path');
 var server = new Hapi.Server();
 server.connection({
-	port: 3000
+	port: 6000
 });
 
 require('./routes')(server);

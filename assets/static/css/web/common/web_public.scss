@@ -1,0 +1,35 @@
+@import "mixin";
+body{font-size:18px; font-weight: 100; font-family: "Arial","Hiragino Sans GB","微软雅黑","宋体"; text-align:center; color:#666; text-align:left; margin:0px auto; padding:0px; background:#fff;}
+a{text-decoration:none;}
+li,ul，dl，ol,details,dt,dl{list-style:none;word-wrap: break-word;}
+div{word-wrap: break-word;}
+ul,li { padding:0; margin:0;word-wrap: break-word;}
+select{word-wrap:initial;}
+dd,dl,dt { padding:0; margin:0;word-wrap: break-word;}
+img{border:none;vertical-align:inherit;}
+a:hover{ text-decoration:none;}
+h1,h2,h3,h4,h5,h6,p{ padding:0; margin:0;word-wrap: break-word;}
+textarea{resize: none;outline: none;}
+label{margin: 0;font-weight: normal;}
+@for $i from 0 to 21 {
+  .pl#{$i*5}sz {  @include plmixin($i*5px)}
+  .pt#{$i*5}sz {  @include ptmixin($i*5px)}
+  .pr#{$i*5}sz {  @include prmixin($i*5px)}
+  .pb#{$i*5}sz {  @include pbmixin($i*5px)}
+  .pl#{$i*5} {  @include plmixin(u($i*5px))}
+  .pt#{$i*5} {  @include ptmixin(u($i*5px))}
+  .pr#{$i*5} {  @include prmixin(u($i*5px))}
+  .pb#{$i*5} {  @include pbmixin(u($i*5px))}
+  .ml#{$i*5}sz {  @include mlmixin($i*5px)}
+  .mt#{$i*5}sz {  @include mtmixin($i*5px)}
+  .mr#{$i*5}sz {  @include mrmixin($i*5px)}
+  .mb#{$i*5}sz {  @include mbmixin($i*5px)}
+  .ml#{$i*5} {  @include mlmixin(u($i*5px))}
+  .mt#{$i*5} {  @include mtmixin(u($i*5px))}
+  .mr#{$i*5} {  @include mrmixin(u($i*5px))}
+  .mb#{$i*5} {  @include mbmixin(u($i*5px))}
+}
+@for $i from 12 to 48 {
+  .fn#{$i}sz {  @include fnmixin($i*1px)}
+  .fn#{$i} {  @include fnmixin(u($i*1px))}
+}

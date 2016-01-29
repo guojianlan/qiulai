@@ -24,13 +24,13 @@ gulp.task('pack', function() {
     //rimraf删除wx下面的文件
 	rimraf('./dist/static/*/'+targetDir, function() {
         //压缩图片开始
-        //gulp.src(['./assets/static/images/'+targetDir+'/*'])
-			//.pipe(imgmin({
-			//	optimizationLevel: 2,
-			//	progressive: true,
-			//	interlaced: true
-			//}))
-			//.pipe(gulp.dest('./dist/static/images/'+targetDir+'/'));
+        gulp.src(['./assets/static/images/'+targetDir+'/*'])
+			.pipe(imgmin({
+				optimizationLevel: 2,
+				progressive: true,
+				interlaced: true
+			}))
+			.pipe(gulp.dest('./dist/static/images/'+targetDir+'/'));
         //压缩图片结束
         //压缩公共css开始
 		gulp.src(['./assets/static/css/'+targetDir+'/common/common.css'])

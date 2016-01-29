@@ -1,0 +1,169 @@
+@mixin transition($value){
+  -webkit-transition:$value;
+  -moz-transition:$value;
+  transition:$value;
+}
+@mixin animation($value){
+  -webkit-animation:$value;
+  -moz-animation:$value;
+  animation:$value;
+}
+@mixin gradient($value){
+  background: linear-gradient($value);
+  background: -moz-linear-gradient($value);
+  background: -webkit-linear-gradient($value);
+
+}
+@mixin boxwidth($width,$height) {
+  width:$width;
+  height:$height;
+}
+@mixin borderColor($color) {
+  border:1px solid $color;
+}
+@mixin boxShadow($normal){
+  box-shadow: $normal;
+  -webkit-box-shadow: $normal;
+  -moz-box-shadow: $normal;
+}
+@mixin translateset($normal){
+  -webkit-transform: $normal;
+  -moz-transform: $normal;
+  transform: $normal;
+}
+@mixin u_radius($normal) {
+  -moz-border-radius: $normal;
+  -webkit-border-radius: $normal;
+  border-radius: $normal;
+}
+@mixin u_radius_top_left($normal){
+  -moz-border-top-left-radius: $normal;
+  -webkit-border-top-left-radius: $normal;
+  border-border-top-left-radius: $normal;
+}
+@mixin u_radius_top_right($normal){
+  -moz-border-top-right-radius: $normal;
+  -webkit-border-top-right-radius: $normal;
+  border-border-top-right-radius: $normal;
+}
+@mixin draw_triangle_left($normal,$color){
+  width: 0;
+  height: 0;
+  border-top: $normal solid transparent;
+  border-right: $normal*2 solid $color;
+  border-bottom: $normal solid transparent;
+}
+@mixin u_radius_bottom_left($normal) {
+  -moz-border-bottom-left-radius: $normal;
+  -webkit-border-bottom-left-radius: $normal;
+  border-border-bottom-left-radius: $normal;
+}
+@mixin u_radius_bottom_right($normal){
+  -moz-border-bottom-right-radius: $normal;
+  -webkit-border-bottom-right-radius: $normal;
+  border-border-bottom-right-radius: $normal;
+}
+@mixin boxsizing($contain){
+  -moz-box-sizing: $contain;
+  -webkit-box-sizing: $contain;
+  box-sizing: $contain;
+}
+$xsmall-break:768px;
+@mixin xsmall(){
+  @media screen and (max-width: $xsmall-break) {
+    @content;
+  }
+}
+@mixin minxsmall(){
+  @media screen and (min-width: 320px) and (max-width: $xsmall-break) {
+    @content;
+  }
+}
+@mixin minsmall414(){
+  @media screen and (max-width: 414px) {
+    @content;
+  }
+}
+@mixin small(){
+  @media screen and (min-width: $xsmall-break) {
+    @content;
+  }
+}
+@mixin smallh800(){
+  @media screen and (max-height: 800px) {
+    @content;
+  }
+}
+@mixin ptmixin($px){
+  padding-top: $px;
+}
+@mixin pbmixin($px){
+  padding-bottom: $px;
+}
+@mixin plmixin($px){
+  padding-left: $px;
+}
+@mixin prmixin($px){
+  padding-right: $px;
+}
+@mixin mtmixin($px){
+  margin-top: $px;
+}
+@mixin mbmixin($px){
+  margin-bottom: $px;
+}
+@mixin mlmixin($px){
+  margin-left: $px;
+}
+@mixin mrmixin($px){
+  margin-right: $px;
+}
+@mixin fnmixin($px){
+  font-size: $px;
+}
+//运算
+@function u($px){
+  @return $px/$mainSize/2*1rem;
+}
+$mainSize:20px;
+$white:#fff;
+$imgsrc:'/static/images/web/';
+$e7color:#e7e7e7;
+$c0color:#c0c0c0;
+$a0color:#a0a0a0;
+$c2color:#c2c2c2;
+$color33:#333;
+$color666:#666;
+$color9d:#9d9d9e;
+$color89:#898989;
+$c9color:#c9c9c9;
+$f6color:#ff6666;
+$ebf4color:#ebf4ff;
+$color0d7:#0d75a8;
+$color127:#127db3;
+$color189:#1890cc;
+$color229a:#229ad6;
+$coloreceef4:#eceef4;
+$colorf7f7f9:#f7f7f9;
+$colorddd:#ddd;
+$color434343:#434343;
+$colorff9a38:#ff9a38;
+$color229ad6:#229ad6; // 387bd6:229ad6
+$color000:#000;
+$colorff921d:#ff921d;
+$color00afe1:#00afe1;
+$color00bfa5:#00bfa5;
+$colord5d7db:#d5d7db;
+$colore6e6e8:#e6e6e8;
+$colorf2f6fa:#f2f6fa;
+$color25292d:#25292d;
+$color8f9396:#8f9396;
+$color9dc251:#9dc251;
+$colorf3f4f8:#f3f4f8;
+$colorf8f6f2:#f8f6f2;
+$colorf4f4f4:#f4f4f4;
+$colore2e5e7:#e2e5e7;
+$colorf8f9fb:#f8f9fb;
+$color60676e:#60676e;
+$color999999:#999999;
+$color9a9a9c:#9a9a9c;
