@@ -6,7 +6,6 @@
 
 body {
   font-size: 20px;
-  font-weight: 100;
   font-family: "Arial","微软雅黑","宋体";
   text-align: center;
   color: #666;
@@ -58,6 +57,22 @@ label {
   margin: 0;
   font-weight: normal; }
 
+input {
+  outline: none;
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+input[type=button], input[type=submit], button {
+  -webkit-appearance: none;
+  outline: none; }
+
+select {
+  outline: none;
+  width: 100%;
+  height: 100%; }
+
+/*字体颜色*/
 .pl0sz {
   padding-left: 0px; }
 
@@ -1307,5 +1322,11 @@ label {
 
 .fr {
   float: right; }
+
+.colorwhite {
+  color: #fff; }
+
+.text-center {
+  text-align: center; }
 
 /*# sourceMappingURL=web_public.css.map */

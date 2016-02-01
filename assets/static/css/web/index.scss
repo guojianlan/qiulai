@@ -53,14 +53,149 @@ body{
     //left-end
     //right-start
     .ql_container_r{
-      width: 100%;background: #000;height: 100%;overflow: hidden;
+      width: 100%;background: #fff;height: 100%;overflow: hidden;padding-bottom: u(100px);
       .ql_container_r_main{
         height: 100%;width: 100%;overflow-y: auto;overflow-x:hidden;
+        //qlr_header-start
+        .qlr_header{
+          height: u(100px);background:#296946;line-height: u(100px);
+          .qlr_heightone{
+            height: u(100px);width:u(30px);line-height: u(100px);position: absolute;left: u(5px);top:0;color: #fff;text-align: center;
+            i{font-size: u(36px);color:rgba(255,255,255,.5);}
+          }
+          .qlr_minimgsrc{width: u(72px);height:u(72px);margin-top: u(14px);@include u_radius(72px);background-repeat: no-repeat;background-position: center;background-size: contain;background-image: url('/static/images/web/boy.png');}
+          .plr_sendNum{position: absolute;width: 8px;height: 8px;@include u_radius(8px);background: #f00;left: 28px;top:u(20px);}
+        }
+        //qlr_header-end
+        //qlr_active-start
+        .qlr_active{height: u(300px);background: #eee;}
+        //qlr_active-end
+        //qlr_btngroup-start
+        .qlr_btngroup{
+          height: u(150px);background: $white;width: 100%;
+          ul{
+            height: 100%;border-top: 1px solid #dddddd;
+            li {
+              width: 33.3333%;  float: left;  height: 100%;  text-align: center;  font-size: 14px;
+              i {
+                font-size: 40px;
+              }
+              .createGameBtb{color:#0f9d58;}
+              .cityGameBtb{color:#ff004d;}
+              .createUserBtb{color:#0f4b9d;}
+            }
+          }
+        }
+        //qlr_btngroup-end
+        //qlr_game-start
+        .qlr_game_main{
+          height: u(80px);background: #f4f4f4;line-height: u(80px);border: 1px solid #ddd;
+          .qlr_game_title{font-size: 16px;}
+          .qlr_game_title_more{
+            height: 100%;overflow: hidden;color: #aaa;
+          }
+        }
+        //qlr_game-end
+        //game_list-start
+        .game_list{
+          li{height: u(162px);border-bottom:1px solid #ddd;}
+          .game_leftNum{position: absolute;right: 0;top: u(50px); font-size:14px;color:#ff004d;}
+          .game_rightNum{position: absolute;left: 0;top: u(50px); font-size:14px;color:#0f9d58;}
+          .game_headrimg{
+            img{width: 100%;}
+          }
+          .prl_gamestart{
+            padding: 2px 4px;font-size: 12px;background: #45c01a;color: $white;display: inline-block;@include u_radius(4px);
+          }
+          .prl_gameend{
+            padding: 2px 4px;font-size: 12px;display: inline-block;@include u_radius(4px);background: #f1f1f1;color:#272636;border:1px solid #ddd;
+          }
+        }
+        //game_list-end
       }
     }
     //right-end
   }
-
+  //fixbtn
+  .fixbtn{
+    position: fixed;bottom: 0;left:0;height: u(100px);width: 100%;background:$white;
+    ul{
+      height: 100%;border-top: 1px solid #dddddd;
+      li {
+        width: 33.3333%;
+        float: left;
+        height: 100%;
+        text-align: center;
+        font-size: 14px;
+        i {font-size: 30px;}
+        &.on {
+          color: #296946;
+        }
+      }
+    }
+  }
+}
+.w33bl{width: 33.33333%;}
+.w20bl{width: 20%; }
+.col_ff004d{color:#ff004d;}
+.col_bbbbbb{color:#bbb;}
+.col_33ac71{color:#33ac71;}
+.h60l60{height: u(60px);line-height: u(60px);}
+.fixdialog{
+  position: fixed;left: 0;top: 0;z-index: 10000;width: 100%;height: 100%;background: #f4f4f4;overflow: hidden;
+  .dialog_main{
+    height: 100%;overflow: auto;
+    .dialog_title{height: u(82px);line-height: u(82px);background: $white;}
+    .dialog_return{position: absolute;left: u(30px);top:0;width: u(82px);height: u(82px);}
+    .dialog_right{position: absolute;right: u(30px);top: 0;height: u(82px);}
+    .create_game{
+      background: $white;border-bottom: 1px solid #ddd;
+      li{
+        border-bottom: 1px solid #ddd;
+        &:last-child{border-bottom: 1px solid transparent;  }
+        input{height: u(74px);line-height: u(74px);font-size: 12px;width: 100%;}
+        select{height: u(74px);line-height: u(74px);display: inline-block;outline: 0;  width: 100%;  font-size: 14px;  background: #fff;border: 0;text-indent: 0;font-size: 12px;  }
+        .showType{position: absolute;left: u(-50px);height: u(74px);width: u(50px);line-height: u(74px);}
+      }
+    }
+    .dialog_caozuo{
+      border-top:1px solid #ddd;border-bottom: 1px solid #ddd;background: #fff;
+    }
+    .user_list{
+      border-top: 1px solid #ddd;
+      img{width: 100%;}
+      li{
+        .user_Num_icon{
+          position: absolute;  width: u(44px);  height: u(44px);  right: 0;  bottom: 0;  line-height: u(44px);  overflow: hidden;  color: #296946;
+        }
+        .user_Num{
+          position: absolute; width: u(44px);  height: u(44px);  right: 0;  bottom: 0;line-height: u(44px);color: $white;
+        }
+        .leave_bg{
+          position: absolute;width: 100%;height: 100%;left: 0;top:0;background: rgba(255,255,255,0.5);display: none;z-index: 1;
+        }
+        &.leaveOn{
+          .user_Num_icon{color:#ccc;}
+          .leave_bg{display: block;}
+        }
+      }
+    }
+    .game_base_Num{
+      height: u(162px);border-bottom:1px solid #ddd;background: $white;
+      .game_leftNum{position: absolute;right: 0;top: u(50px); font-size:14px;color:#ff004d;}
+      .game_rightNum{position: absolute;left: 0;top: u(50px); font-size:14px;color:#0f9d58;}
+      .game_headrimg{
+        img{width: 100%;}
+      }
+      .prl_gamestart{
+        padding: 2px 4px;font-size: 12px;background: #45c01a;color: $white;display: inline-block;@include u_radius(4px);
+      }
+      .prl_gameend{
+        padding: 2px 4px;font-size: 12px;display: inline-block;@include u_radius(4px);background: #f1f1f1;color:#272636;border:1px solid #ddd;
+      }
+    }
+    .dialog_createBtn{height: u(86px);line-height: u(86px);background: #33ac71;font-size: 20px;color: $white;text-align: center;@include u_radius(4px);}
+  }
 }
 @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
   html{font-size:($mainSize*1.17);}

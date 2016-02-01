@@ -1,6 +1,6 @@
 @import "mixin";
 *{@include boxsizing(border-box);}
-body{font-size:$mainSize; font-weight: 100; font-family: "Arial","微软雅黑","宋体"; text-align:center; color:#666; text-align:left; margin:0; padding:0; background:#fff;}
+body{font-size:$mainSize;font-family: "Arial","微软雅黑","宋体"; text-align:center; color:#666; text-align:left; margin:0; padding:0; background:#fff;}
 a{text-decoration:none;}
 li,ul，dl，ol,details,dt,dl{list-style:none;word-wrap: break-word;}
 div{word-wrap: break-word;}
@@ -12,6 +12,14 @@ a:hover{ text-decoration:none;}
 h1,h2,h3,h4,h5,h6,p{ padding:0; margin:0;word-wrap: break-word;}
 textarea{resize: none;outline: none;}
 label{margin: 0;font-weight: normal;}
+input{outline: none;border: 0;padding: 0;margin: 0;}
+//按钮格式化
+input[type=button],input[type=submit],button{
+  -webkit-appearance:none;
+  outline:none
+}
+select{outline: none;width:100%;height:100%;}
+/*字体颜色*/
 @for $i from 0 to 21 {
   .pl#{$i*5}sz {  @include plmixin($i*5px)}
   .pt#{$i*5}sz {  @include ptmixin($i*5px)}
@@ -47,3 +55,5 @@ label{margin: 0;font-weight: normal;}
 .pof{position: fixed;}
 .fl{float: left;}
 .fr{float: right;}
+.colorwhite{color:$white;}
+.text-center{text-align: center;}

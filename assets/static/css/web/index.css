@@ -113,14 +113,304 @@ body {
             margin-top: 0; }
     .ql_container .ql_container_main .ql_container_r {
       width: 100%;
-      background: #000;
+      background: #fff;
       height: 100%;
-      overflow: hidden; }
+      overflow: hidden;
+      padding-bottom: 2.5rem; }
       .ql_container .ql_container_main .ql_container_r .ql_container_r_main {
         height: 100%;
         width: 100%;
         overflow-y: auto;
         overflow-x: hidden; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_header {
+          height: 2.5rem;
+          background: #296946;
+          line-height: 2.5rem; }
+          .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_header .qlr_heightone {
+            height: 2.5rem;
+            width: 0.75rem;
+            line-height: 2.5rem;
+            position: absolute;
+            left: 0.125rem;
+            top: 0;
+            color: #fff;
+            text-align: center; }
+            .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_header .qlr_heightone i {
+              font-size: 0.9rem;
+              color: rgba(255, 255, 255, 0.5); }
+          .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_header .qlr_minimgsrc {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-top: 0.35rem;
+            -moz-border-radius: 72px;
+            -webkit-border-radius: 72px;
+            border-radius: 72px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url("/static/images/web/boy.png"); }
+          .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_header .plr_sendNum {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+            background: #f00;
+            left: 28px;
+            top: 0.5rem; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_active {
+          height: 7.5rem;
+          background: #eee; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_btngroup {
+          height: 3.75rem;
+          background: #fff;
+          width: 100%; }
+          .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_btngroup ul {
+            height: 100%;
+            border-top: 1px solid #dddddd; }
+            .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_btngroup ul li {
+              width: 33.3333%;
+              float: left;
+              height: 100%;
+              text-align: center;
+              font-size: 14px; }
+              .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_btngroup ul li i {
+                font-size: 40px; }
+              .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_btngroup ul li .createGameBtb {
+                color: #0f9d58; }
+              .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_btngroup ul li .cityGameBtb {
+                color: #ff004d; }
+              .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_btngroup ul li .createUserBtb {
+                color: #0f4b9d; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_game_main {
+          height: 2rem;
+          background: #f4f4f4;
+          line-height: 2rem;
+          border: 1px solid #ddd; }
+          .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_game_main .qlr_game_title {
+            font-size: 16px; }
+          .ql_container .ql_container_main .ql_container_r .ql_container_r_main .qlr_game_main .qlr_game_title_more {
+            height: 100%;
+            overflow: hidden;
+            color: #aaa; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .game_list li {
+          height: 4.05rem;
+          border-bottom: 1px solid #ddd; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .game_list .game_leftNum {
+          position: absolute;
+          right: 0;
+          top: 1.25rem;
+          font-size: 14px;
+          color: #ff004d; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .game_list .game_rightNum {
+          position: absolute;
+          left: 0;
+          top: 1.25rem;
+          font-size: 14px;
+          color: #0f9d58; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .game_list .game_headrimg img {
+          width: 100%; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .game_list .prl_gamestart {
+          padding: 2px 4px;
+          font-size: 12px;
+          background: #45c01a;
+          color: #fff;
+          display: inline-block;
+          -moz-border-radius: 4px;
+          -webkit-border-radius: 4px;
+          border-radius: 4px; }
+        .ql_container .ql_container_main .ql_container_r .ql_container_r_main .game_list .prl_gameend {
+          padding: 2px 4px;
+          font-size: 12px;
+          display: inline-block;
+          -moz-border-radius: 4px;
+          -webkit-border-radius: 4px;
+          border-radius: 4px;
+          background: #f1f1f1;
+          color: #272636;
+          border: 1px solid #ddd; }
+  .ql_container .fixbtn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 100%;
+    background: #fff; }
+    .ql_container .fixbtn ul {
+      height: 100%;
+      border-top: 1px solid #dddddd; }
+      .ql_container .fixbtn ul li {
+        width: 33.3333%;
+        float: left;
+        height: 100%;
+        text-align: center;
+        font-size: 14px; }
+        .ql_container .fixbtn ul li i {
+          font-size: 30px; }
+        .ql_container .fixbtn ul li.on {
+          color: #296946; }
+
+.w33bl {
+  width: 33.33333%; }
+
+.w20bl {
+  width: 20%; }
+
+.col_ff004d {
+  color: #ff004d; }
+
+.col_bbbbbb {
+  color: #bbb; }
+
+.col_33ac71 {
+  color: #33ac71; }
+
+.h60l60 {
+  height: 1.5rem;
+  line-height: 1.5rem; }
+
+.fixdialog {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  overflow: hidden; }
+  .fixdialog .dialog_main {
+    height: 100%;
+    overflow: auto; }
+    .fixdialog .dialog_main .dialog_title {
+      height: 2.05rem;
+      line-height: 2.05rem;
+      background: #fff; }
+    .fixdialog .dialog_main .dialog_return {
+      position: absolute;
+      left: 0.75rem;
+      top: 0;
+      width: 2.05rem;
+      height: 2.05rem; }
+    .fixdialog .dialog_main .dialog_right {
+      position: absolute;
+      right: 0.75rem;
+      top: 0;
+      height: 2.05rem; }
+    .fixdialog .dialog_main .create_game {
+      background: #fff;
+      border-bottom: 1px solid #ddd; }
+      .fixdialog .dialog_main .create_game li {
+        border-bottom: 1px solid #ddd; }
+        .fixdialog .dialog_main .create_game li:last-child {
+          border-bottom: 1px solid transparent; }
+        .fixdialog .dialog_main .create_game li input {
+          height: 1.85rem;
+          line-height: 1.85rem;
+          font-size: 12px;
+          width: 100%; }
+        .fixdialog .dialog_main .create_game li select {
+          height: 1.85rem;
+          line-height: 1.85rem;
+          display: inline-block;
+          outline: 0;
+          width: 100%;
+          font-size: 14px;
+          background: #fff;
+          border: 0;
+          text-indent: 0;
+          font-size: 12px; }
+        .fixdialog .dialog_main .create_game li .showType {
+          position: absolute;
+          left: -1.25rem;
+          height: 1.85rem;
+          width: 1.25rem;
+          line-height: 1.85rem; }
+    .fixdialog .dialog_main .dialog_caozuo {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      background: #fff; }
+    .fixdialog .dialog_main .user_list {
+      border-top: 1px solid #ddd; }
+      .fixdialog .dialog_main .user_list img {
+        width: 100%; }
+      .fixdialog .dialog_main .user_list li .user_Num_icon {
+        position: absolute;
+        width: 1.1rem;
+        height: 1.1rem;
+        right: 0;
+        bottom: 0;
+        line-height: 1.1rem;
+        overflow: hidden;
+        color: #296946; }
+      .fixdialog .dialog_main .user_list li .user_Num {
+        position: absolute;
+        width: 1.1rem;
+        height: 1.1rem;
+        right: 0;
+        bottom: 0;
+        line-height: 1.1rem;
+        color: #fff; }
+      .fixdialog .dialog_main .user_list li .leave_bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(255, 255, 255, 0.5);
+        display: none;
+        z-index: 1; }
+      .fixdialog .dialog_main .user_list li.leaveOn .user_Num_icon {
+        color: #ccc; }
+      .fixdialog .dialog_main .user_list li.leaveOn .leave_bg {
+        display: block; }
+    .fixdialog .dialog_main .game_base_Num {
+      height: 4.05rem;
+      border-bottom: 1px solid #ddd;
+      background: #fff; }
+      .fixdialog .dialog_main .game_base_Num .game_leftNum {
+        position: absolute;
+        right: 0;
+        top: 1.25rem;
+        font-size: 14px;
+        color: #ff004d; }
+      .fixdialog .dialog_main .game_base_Num .game_rightNum {
+        position: absolute;
+        left: 0;
+        top: 1.25rem;
+        font-size: 14px;
+        color: #0f9d58; }
+      .fixdialog .dialog_main .game_base_Num .game_headrimg img {
+        width: 100%; }
+      .fixdialog .dialog_main .game_base_Num .prl_gamestart {
+        padding: 2px 4px;
+        font-size: 12px;
+        background: #45c01a;
+        color: #fff;
+        display: inline-block;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px; }
+      .fixdialog .dialog_main .game_base_Num .prl_gameend {
+        padding: 2px 4px;
+        font-size: 12px;
+        display: inline-block;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        background: #f1f1f1;
+        color: #272636;
+        border: 1px solid #ddd; }
+    .fixdialog .dialog_main .dialog_createBtn {
+      height: 2.15rem;
+      line-height: 2.15rem;
+      background: #33ac71;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
 
 @media (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   html {
