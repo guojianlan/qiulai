@@ -257,11 +257,17 @@ body {
 .w20bl {
   width: 20%; }
 
+.w50bl {
+  width: 50%; }
+
 .col_ff004d {
   color: #ff004d; }
 
 .col_bbbbbb {
   color: #bbb; }
+
+.col_dddddd {
+  color: #ddd; }
 
 .col_33ac71 {
   color: #33ac71; }
@@ -380,8 +386,10 @@ body {
         top: 1.25rem;
         font-size: 14px;
         color: #0f9d58; }
-      .fixdialog .dialog_main .game_base_Num .game_headrimg img {
-        width: 100%; }
+      .fixdialog .dialog_main .game_base_Num .game_headrimg {
+        max-width: 150px; }
+        .fixdialog .dialog_main .game_base_Num .game_headrimg img {
+          width: 100%; }
       .fixdialog .dialog_main .game_base_Num .prl_gamestart {
         padding: 2px 4px;
         font-size: 12px;
@@ -411,6 +419,88 @@ body {
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
       border-radius: 4px; }
+    .fixdialog .dialog_main .dialog_leaveBtn {
+      height: 2.15rem;
+      line-height: 2.15rem;
+      background: #ddd;
+      font-size: 20px;
+      border: 1px solid #bbb;
+      color: #bbb;
+      text-align: center;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
+    .fixdialog .dialog_main .user_item .bottomgreen {
+      width: 100%;
+      height: 2px;
+      background: #45c01a;
+      left: 0;
+      bottom: -1px;
+      position: absolute;
+      display: none; }
+    .fixdialog .dialog_main .user_item.on .bottomgreen {
+      display: block; }
+
+.dialog_tips_main {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10001;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .dialog_tips_main .dialog_tips_bgblack {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
+  .dialog_tips_main .dialog_tips_bgopacity {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%; }
+  .dialog_tips_main .dialog_tips_main_h {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 0.5rem; }
+    .dialog_tips_main .dialog_tips_main_h .dialog_tips_title {
+      height: 1.5rem;
+      line-height: 1.5rem;
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      background: #33ac71;
+      color: #fff; }
+    .dialog_tips_main .dialog_tips_main_h .dialog_tips_body {
+      min-height: 20px;
+      background: #fff;
+      border: 1px solid #ddd; }
+    .dialog_tips_main .dialog_tips_main_h .dialog_tips_footer {
+      height: 1.5rem;
+      line-height: 1.5rem;
+      background: #bbb;
+      border-bottom: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd; }
+    .dialog_tips_main .dialog_tips_main_h .dialog_tips_showdia {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      max-width: 200px;
+      height: 60px;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      line-height: 60px;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px; }
 
 @media (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   html {

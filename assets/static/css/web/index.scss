@@ -137,8 +137,10 @@ body{
 }
 .w33bl{width: 33.33333%;}
 .w20bl{width: 20%; }
+.w50bl{width: 50%;}
 .col_ff004d{color:#ff004d;}
 .col_bbbbbb{color:#bbb;}
+.col_dddddd{color:#ddd;}
 .col_33ac71{color:#33ac71;}
 .h60l60{height: u(60px);line-height: u(60px);}
 .fixdialog{
@@ -185,6 +187,7 @@ body{
       .game_leftNum{position: absolute;right: 0;top: u(50px); font-size:14px;color:#ff004d;}
       .game_rightNum{position: absolute;left: 0;top: u(50px); font-size:14px;color:#0f9d58;}
       .game_headrimg{
+        max-width: 150px;
         img{width: 100%;}
       }
       .prl_gamestart{
@@ -195,7 +198,35 @@ body{
       }
     }
     .dialog_createBtn{height: u(86px);line-height: u(86px);background: #33ac71;font-size: 20px;color: $white;text-align: center;@include u_radius(4px);}
+    .dialog_leaveBtn{height: u(86px);line-height: u(86px);background: #ddd;font-size: 20px;border:1px solid #bbb;color:#bbb;text-align: center;@include u_radius(4px);}
+    .user_item{
+      .bottomgreen{width: 100%;height: 2px;background:#45c01a;left: 0;bottom: -1px;position: absolute;display: none; }
+      &.on{
+        .bottomgreen{display: block;}
+      }
+
+    }
   }
+}
+.dialog_tips_main{
+  position: fixed;left: 0;top: 0;z-index: 10001;width: 100%;height: 100%;overflow: hidden;
+  .dialog_tips_bgblack{position: absolute;z-index: 1;width: 100%;height: 100%;background: rgba(0,0,0,.5);}
+  .dialog_tips_bgopacity{position: absolute;z-index: 1;width: 100%;height: 100%;}
+  .dialog_tips_main_h{
+    height: 100%;overflow: auto;position: relative;z-index: 2;padding: 0 u(20px);
+    .dialog_tips_title{
+      height: u(60px);line-height: u(60px);border-top:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;background: #33ac71;
+      color:$white;
+    }
+    .dialog_tips_body{
+      min-height: 20px;background: $white;border:1px solid #ddd;
+    }
+    .dialog_tips_footer{
+      height: u(60px);line-height: u(60px);background: #bbb;border-bottom:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;
+    }
+    .dialog_tips_showdia{position: absolute;left: 50%;top:50%;width: 100%;max-width: 200px;height: 60px;@include translateset(translate(-50%,-50%));background: rgba(0,0,0,.5);color: $white;line-height: 60px;@include u_radius(10px);}
+  }
+
 }
 @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
   html{font-size:($mainSize*1.17);}
